@@ -32,11 +32,5 @@ client.on('message', (channel, tags, message, self) => {
     console.log('Oli threw pole!')
     process.exit()
   }
-
-  if (!fThrown && !authorIsMe && messageContent === 'f') {
-    client.say(channel, `F`);
-    fThrown = true
-    return
-  }
 });
 		
