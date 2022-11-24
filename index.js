@@ -27,7 +27,7 @@ client.on('message', (channel, tags, message, self) => {
   const hasOliThrownPole = authorIsOli && messageContent === '!pole'
   console.log({authorIsOli, authorIsMe, hasOliThrownPole})
 
-  if (!poleThrown && hasOliThrownPole) {
+  if (hasOliThrownPole) {
     client.say(channel, `!pole`);
     console.log('Oli threw pole!')
     process.exit()
