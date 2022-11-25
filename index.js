@@ -15,8 +15,6 @@ const client = new tmi.Client({
 	channels: [ 'olivernabani' ]
 });
 
-let fThrown = false
-
 client.connect();
 
 client.on('message', (channel, tags, message, self) => {
