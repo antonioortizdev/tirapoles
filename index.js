@@ -1,7 +1,7 @@
 const tmi = require('tmi.js')
 require('dotenv').config()
 
-const ONE_SECOND = 1000
+const HALF_A_SECOND = 500
 
 const appEnv = process.env.APP_ENV
 if (!appEnv) throw new Error('❌ Application environment is not defined.')
@@ -20,7 +20,7 @@ const client = new tmi.Client({
 const sleep = (waitTimeInMs) => new Promise(resolve => setTimeout(resolve, waitTimeInMs))
 
 const sayPole = async () => {
-  await sleep(ONE_SECOND)
+  await sleep(HALF_A_SECOND)
   client.say(channel, `!pole`)
   console.log('Oli threw pole!')
   process.exit()
